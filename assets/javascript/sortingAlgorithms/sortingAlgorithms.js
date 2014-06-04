@@ -67,7 +67,7 @@ SortingAlgorithms.prototype = {
     // countingSort: function countingSort(lst) { },
     // bucketSort: function bucketSort(lst) { },
     // radixSort: function radixSort(lst) { },
-}
+};
 
 var sorter = new SortingAlgorithms();
 

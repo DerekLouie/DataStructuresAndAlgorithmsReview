@@ -1,13 +1,16 @@
+/*jslint evil: true */
+/*jshint loopfunc: true */
+
 // for running tests with node
 var document = document || 0;
 
-var sorted, nameOfAlgo, failed = [], passed;
+var sorted, failed = [], passed;
 
 function SortingTester() {}
 
 SortingTester.prototype = {
     test: function test(algos) {
-        for (nameOfAlgo in algos) {
+        for (var nameOfAlgo in algos) {
             testingArray.forEach(
                     function(element,index){
                         sorted = algos[nameOfAlgo](element.slice(0));
@@ -22,11 +25,11 @@ SortingTester.prototype = {
             if (passed) {
                 console.log("TEST "+nameOfAlgo+": PASSED"); 
                 if(document) {
-                    document.write("TEST "+nameOfAlgo+": <span class='passed'>PASSED</span><br/>")
+                    document.write("TEST "+nameOfAlgo+": <span class='passed'>PASSED</span><br/>");
                 }
             }
         } 
-        if(failed.length){
+        if (failed.length) {
             console.log("\n\n\nFAILED TESTS: \n");
             failed.forEach(function(element) {
                 console.log(element);
@@ -36,6 +39,6 @@ SortingTester.prototype = {
             });
         }
     }
-}
+};
 
 var tester = new SortingTester();
