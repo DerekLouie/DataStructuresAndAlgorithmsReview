@@ -1,3 +1,9 @@
+#How to setup
+
+1. Inside build run 'npm install'
+2. Run `gulp`
+3. Open up index.html and enjoy!
+
 #List of topics to review
 ---
 
