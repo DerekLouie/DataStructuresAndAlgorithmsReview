@@ -1,0 +1,37 @@
+{
+  "name": "DataStructuresAndAlgorithmsReview",
+  "version": "0.0.0",
+  "description": "Data Structures and Algorithms Practice",
+  "main": "flo.js",
+  "dependencies": {
+    "gulp-changed": "~0.4.0",
+    "gulp-concat": "~2.2.0",
+    "fb-flo": "~0.2.1",
+    "gulp": "~3.7.0",
+    "gulp-rename": "~1.2.0",
+    "gulp-sass": "~0.7.1",
+    "gulp-jshint": "~1.6.1",
+    "jshint-stylish": "~0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DerekLouie/DataStructuresAndAlgorithmsReview"
+  },
+  "keywords": [
+    "Data",
+    "Structures",
+    "Algorithms",
+    "Gulp",
+    "fb-flo"
+  ],
+  "author": "Derek Louie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DerekLouie/DataStructuresAndAlgorithmsReview/issues"
+  },
+  "homepage": "https://github.com/DerekLouie/DataStructuresAndAlgorithmsReview"
+}
