@@ -74,5 +74,3 @@ var sorter = new SortingAlgorithms();
 console.log("Running Sorting Algorithms");
 
 tester.test(sorter);
-
-

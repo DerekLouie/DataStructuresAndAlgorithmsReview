@@ -2,12 +2,12 @@ var flo = require('fb-flo'),
     path = require('path'),
     fs = require('fs');
 
-var server = flo( '../', 
+var server = flo( '../site', 
     {
     port: 8888,
     host: 'localhost',
     verbose: true,
-    glob: [ '**/*.js', '**/*.css' ]
+    glob: [ '*.js', '*.scss' ]
   }, resolver);
 
 server.once('ready', function() {
@@ -22,8 +22,8 @@ function resolver(filepath, callback) {
   console.log("-----------------");
 
   callback({
-    resourceURL: '../javascript/test' + path.extname(filepath),
-    contents: fs.readFileSync('../' + filepath),
-    reload: true
+    resourceURL: 'bundle' + path.extname(filepath)
+    ,contents: fs.readFileSync('../site/' + filepath)
+    ,reload: true
   });
 }
