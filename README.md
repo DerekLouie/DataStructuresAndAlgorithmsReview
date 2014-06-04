@@ -31,7 +31,7 @@
 * Minimum and maximum
 * Selection in expected linear time 
 * Selection in worst-case linear time
-* III Data Structures
+* Data Structures
 * Elementary Data Structures
 * Stacks and queues 
 * Linked lists
@@ -57,7 +57,7 @@
 * Dynamic order statistics 
 * How to augment a data structure 
 * Interval trees
-* IV Advanced Design and Analysis Technique
+* Advanced Design and Analysis Technique
 * Dynamic Programming
 * Assembly-line scheduling 
 * Matrix-chain multiplication 
@@ -75,7 +75,7 @@
 * The accounting method 
 * The potential method 
 * Dynamic tables
-* V Advanced Data Structures
+* Advanced Data Structures
 * B-Trees 
 * Definition of B-trees 
 * Basic operations on B-trees 
@@ -119,7 +119,7 @@
 * Maximum bipartite matching 
 * Push-relabel algorithms 
 * The relabel-to-front algorithm
-* VII Selected Topics
+* Selected Topics
 * Sorting Networks 
 * Comparison networks 
 * The zero-one principle 
