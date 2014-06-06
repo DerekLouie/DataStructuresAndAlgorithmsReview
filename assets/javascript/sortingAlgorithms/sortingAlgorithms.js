@@ -13,7 +13,12 @@ function swap(arr, index1, index2) {
     arr[index1] = arr[index2];
     arr[index2] = dummy;
 }
+
 // http://en.wikipedia.org/wiki/Sorting_algorithm
+// https://github.com/nzakas/computer-science-in-javascript/
+// http://www.nczonline.net/blog/2012/10/02/computer-science-and-javascript-merge-sort/
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+// http://davidwalsh.name/javascript-clone-array
 SortingAlgorithms.prototype = {
     // Insertion sort: http://www.princeton.edu/~achaney/tmve/wiki100k/docs/Insertion_sort.html
     // http://en.wikibooks.org/wiki/A-level_Computing/AQA/Problem_Solving,_Programming,_Operating_Systems,_Databases_and_Networking/Programming_Concepts/Insertion_sort
