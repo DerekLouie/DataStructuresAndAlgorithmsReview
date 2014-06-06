@@ -11,7 +11,10 @@
     "gulp-rename": "~1.2.0",
     "gulp-sass": "~0.7.1",
     "gulp-jshint": "~1.6.1",
-    "jshint-stylish": "~0.2.0"
+    "jshint-stylish": "~0.2.0",
+    "gulp-watch": "~0.6.5",
+    "gulp-plumber": "~0.6.2",
+    "underscore": "~1.6.0"
   },
   "devDependencies": {},
   "scripts": {
