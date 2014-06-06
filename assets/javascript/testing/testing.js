@@ -1,5 +1,6 @@
 /*jslint evil: true */
 /*jshint loopfunc: true */
+/*jshint debug: true */
 
 // for running tests with node
 var document = document || 0;
@@ -13,12 +14,13 @@ SortingTester.prototype = {
         for (var nameOfAlgo in algos) {
             testingArray.forEach(
                     function(element,index){
+                        console.log("Running Test: " + element); 
                         sorted = algos[nameOfAlgo](element.slice(0));
                         passed = true;
                         // console.log("Test "+ index +": ("+nameOfAlgo +"): \n","Original: ", element, "\n   Answer: ", sorted);
                         if(sorted.toString() !== answer.toString()) {
                             console.log("TEST FAILED"); 
-                            failed.push("Test "+ index +": ("+ nameOfAlgo +")");
+                            failed.push("Test "+ index +": ("+ nameOfAlgo +"): " + sorted);
                             passed = false;
                         }
                     });

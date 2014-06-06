@@ -180,3 +180,14 @@
 * The set-covering problem 
 * Randomization and linear programming 
 * The subset-sum problem
+
+---
+
+##Takeaways:
+
+1) Time Complexity
+2) Use cases
+3) Trade off's
+4) Iterative and Recursive implementations
+4) Associated DS's
+5) Does it scale?

@@ -12,10 +12,10 @@ var node;
 
 // Config stuff:
 // Specific order that creation of files in javascript folder and in subfolders trigger the watch
+// Persistent bug, watch doesn't trigger on creation of a file in javascript/ path.
 // Refer to: http://stackoverflow.com/questions/21386940/why-does-gulp-src-not-like-being-passed-an-array-of-complete-paths-to-files
 var JSBase = '../assets/javascript/';
 var JSRelPaths = ['testing/*.js','*.js','**/*.js'];
-// var JSRelPaths = ['**/*.js','testing/*.js','*.js'];
 var JSPaths = _.map(JSRelPaths, function(path) {return JSBase+path;});
 var CSSBase = '../assets/scss/';
 var CSSRelPaths = ['*.scss','**/*.scss'];
@@ -73,5 +73,4 @@ function onError (err) {
     }
 }
 
-// gulp.task('default', ['bundle','watch_js','watch_css','fb-flo']);
-gulp.task('default', ['bundle','watch_js','fb-flo']);
+gulp.task('default', ['bundle','watch_js','watch_css','fb-flo']);
