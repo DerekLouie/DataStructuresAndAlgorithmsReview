@@ -1,0 +1,11 @@
+##Still to touch:
+ - Amortized Analysis
+ - van Emde Boas Trees
+ - Multithreaded Algorithms
+ - Matrix Operations
+ - Linear Programming
+ - Polynomials and the FFT
+ - Number-Theoretic Algorithms
+ - Computational Geometry
+ - NP-Completeness
+ - Approximation Algorithms

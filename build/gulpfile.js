@@ -21,10 +21,15 @@ var CSSBase = '../assets/scss/';
 var CSSRelPaths = ['*.scss','**/*.scss'];
 var CSSPaths = _.map(CSSRelPaths, function(path) {return CSSBase+path;});
 
-gulp.task('bundle_js', function() {
+gulp.task('bundle_js_gulp', function() {
   if (!node) {
     gulp.start('fb-flo');
   }
+  gulp.start('bundle_js');
+});
+
+
+gulp.task('bundle_js', function() {
   gulp.src(JSPaths, {base: JSBase })
     .pipe(plumber({errorHandler: onError}))
     .pipe(jshint())
@@ -57,11 +62,11 @@ gulp.task('fb-flo', function() {
 });
 
 gulp.task('watch_js', function() {
-    gulp.watch(JSPaths, ['bundle_js']); 
+    gulp.watch(JSPaths, ['bundle_js_gulp']);
 });
 
 gulp.task('watch_css', function() {
-    gulp.watch(CSSPaths, ['bundle_css']); 
+    gulp.watch(CSSPaths, ['bundle_css']);
 });
 
 function onError (err) {

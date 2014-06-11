@@ -1,28 +1,18 @@
 /*jshint debug: true */
+/*jslint evil: true */
 
-testingArray = [[1, 2, 3, 4, 5], [1, 2, 3, 5, 4], [1, 2, 4, 3, 5], [1, 2, 4, 5, 3], [1, 2, 5, 3, 4], [1, 2, 5, 4, 3], [1, 3, 2, 4, 5], [1, 3, 2, 5, 4], [1, 3, 4, 2, 5], [1, 3, 4, 5, 2], [1, 3, 5, 2, 4], [1, 3, 5, 4, 2], [1, 4, 2, 3, 5], [1, 4, 2, 5, 3], [1, 4, 3, 2, 5], [1, 4, 3, 5, 2], [1, 4, 5, 2, 3], [1, 4, 5, 3, 2], [1, 5, 2, 3, 4], [1, 5, 2, 4, 3], [1, 5, 3, 2, 4], [1, 5, 3, 4, 2], [1, 5, 4, 2, 3], [1, 5, 4, 3, 2], [2, 1, 3, 4, 5], [2, 1, 3, 5, 4], [2, 1, 4, 3, 5], [2, 1, 4, 5, 3], [2, 1, 5, 3, 4], [2, 1, 5, 4, 3], [2, 3, 1, 4, 5], [2, 3, 1, 5, 4], [2, 3, 4, 1, 5], [2, 3, 4, 5, 1], [2, 3, 5, 1, 4], [2, 3, 5, 4, 1], [2, 4, 1, 3, 5], [2, 4, 1, 5, 3], [2, 4, 3, 1, 5], [2, 4, 3, 5, 1], [2, 4, 5, 1, 3], [2, 4, 5, 3, 1], [2, 5, 1, 3, 4], [2, 5, 1, 4, 3], [2, 5, 3, 1, 4], [2, 5, 3, 4, 1], [2, 5, 4, 1, 3], [2, 5, 4, 3, 1], [3, 1, 2, 4, 5], [3, 1, 2, 5, 4], [3, 1, 4, 2, 5], [3, 1, 4, 5, 2], [3, 1, 5, 2, 4], [3, 1, 5, 4, 2], [3, 2, 1, 4, 5], [3, 2, 1, 5, 4], [3, 2, 4, 1, 5], [3, 2, 4, 5, 1], [3, 2, 5, 1, 4], [3, 2, 5, 4, 1], [3, 4, 1, 2, 5], [3, 4, 1, 5, 2], [3, 4, 2, 1, 5], [3, 4, 2, 5, 1], [3, 4, 5, 1, 2], [3, 4, 5, 2, 1], [3, 5, 1, 2, 4], [3, 5, 1, 4, 2], [3, 5, 2, 1, 4], [3, 5, 2, 4, 1], [3, 5, 4, 1, 2], [3, 5, 4, 2, 1], [4, 1, 2, 3, 5], [4, 1, 2, 5, 3], [4, 1, 3, 2, 5], [4, 1, 3, 5, 2], [4, 1, 5, 2, 3], [4, 1, 5, 3, 2], [4, 2, 1, 3, 5], [4, 2, 1, 5, 3], [4, 2, 3, 1, 5], [4, 2, 3, 5, 1], [4, 2, 5, 1, 3], [4, 2, 5, 3, 1], [4, 3, 1, 2, 5], [4, 3, 1, 5, 2], [4, 3, 2, 1, 5], [4, 3, 2, 5, 1], [4, 3, 5, 1, 2], [4, 3, 5, 2, 1], [4, 5, 1, 2, 3], [4, 5, 1, 3, 2], [4, 5, 2, 1, 3], [4, 5, 2, 3, 1], [4, 5, 3, 1, 2], [4, 5, 3, 2, 1], [5, 1, 2, 3, 4], [5, 1, 2, 4, 3], [5, 1, 3, 2, 4], [5, 1, 3, 4, 2], [5, 1, 4, 2, 3], [5, 1, 4, 3, 2], [5, 2, 1, 3, 4], [5, 2, 1, 4, 3], [5, 2, 3, 1, 4], [5, 2, 3, 4, 1], [5, 2, 4, 1, 3], [5, 2, 4, 3, 1], [5, 3, 1, 2, 4], [5, 3, 1, 4, 2], [5, 3, 2, 1, 4], [5, 3, 2, 4, 1], [5, 3, 4, 1, 2], [5, 3, 4, 2, 1], [5, 4, 1, 2, 3], [5, 4, 1, 3, 2], [5, 4, 2, 1, 3], [5, 4, 2, 3, 1], [5, 4, 3, 1, 2], [5, 4, 3, 2, 1]];
-answer = [1,2,3,4,5];
+sortingTestingArray = [[1, 2, 3, 4, 5], [1, 2, 3, 5, 4], [1, 2, 4, 3, 5], [1, 2, 4, 5, 3], [1, 2, 5, 3, 4], [1, 2, 5, 4, 3], [1, 3, 2, 4, 5], [1, 3, 2, 5, 4], [1, 3, 4, 2, 5], [1, 3, 4, 5, 2], [1, 3, 5, 2, 4], [1, 3, 5, 4, 2], [1, 4, 2, 3, 5], [1, 4, 2, 5, 3], [1, 4, 3, 2, 5], [1, 4, 3, 5, 2], [1, 4, 5, 2, 3], [1, 4, 5, 3, 2], [1, 5, 2, 3, 4], [1, 5, 2, 4, 3], [1, 5, 3, 2, 4], [1, 5, 3, 4, 2], [1, 5, 4, 2, 3], [1, 5, 4, 3, 2], [2, 1, 3, 4, 5], [2, 1, 3, 5, 4], [2, 1, 4, 3, 5], [2, 1, 4, 5, 3], [2, 1, 5, 3, 4], [2, 1, 5, 4, 3], [2, 3, 1, 4, 5], [2, 3, 1, 5, 4], [2, 3, 4, 1, 5], [2, 3, 4, 5, 1], [2, 3, 5, 1, 4], [2, 3, 5, 4, 1], [2, 4, 1, 3, 5], [2, 4, 1, 5, 3], [2, 4, 3, 1, 5], [2, 4, 3, 5, 1], [2, 4, 5, 1, 3], [2, 4, 5, 3, 1], [2, 5, 1, 3, 4], [2, 5, 1, 4, 3], [2, 5, 3, 1, 4], [2, 5, 3, 4, 1], [2, 5, 4, 1, 3], [2, 5, 4, 3, 1], [3, 1, 2, 4, 5], [3, 1, 2, 5, 4], [3, 1, 4, 2, 5], [3, 1, 4, 5, 2], [3, 1, 5, 2, 4], [3, 1, 5, 4, 2], [3, 2, 1, 4, 5], [3, 2, 1, 5, 4], [3, 2, 4, 1, 5], [3, 2, 4, 5, 1], [3, 2, 5, 1, 4], [3, 2, 5, 4, 1], [3, 4, 1, 2, 5], [3, 4, 1, 5, 2], [3, 4, 2, 1, 5], [3, 4, 2, 5, 1], [3, 4, 5, 1, 2], [3, 4, 5, 2, 1], [3, 5, 1, 2, 4], [3, 5, 1, 4, 2], [3, 5, 2, 1, 4], [3, 5, 2, 4, 1], [3, 5, 4, 1, 2], [3, 5, 4, 2, 1], [4, 1, 2, 3, 5], [4, 1, 2, 5, 3], [4, 1, 3, 2, 5], [4, 1, 3, 5, 2], [4, 1, 5, 2, 3], [4, 1, 5, 3, 2], [4, 2, 1, 3, 5], [4, 2, 1, 5, 3], [4, 2, 3, 1, 5], [4, 2, 3, 5, 1], [4, 2, 5, 1, 3], [4, 2, 5, 3, 1], [4, 3, 1, 2, 5], [4, 3, 1, 5, 2], [4, 3, 2, 1, 5], [4, 3, 2, 5, 1], [4, 3, 5, 1, 2], [4, 3, 5, 2, 1], [4, 5, 1, 2, 3], [4, 5, 1, 3, 2], [4, 5, 2, 1, 3], [4, 5, 2, 3, 1], [4, 5, 3, 1, 2], [4, 5, 3, 2, 1], [5, 1, 2, 3, 4], [5, 1, 2, 4, 3], [5, 1, 3, 2, 4], [5, 1, 3, 4, 2], [5, 1, 4, 2, 3], [5, 1, 4, 3, 2], [5, 2, 1, 3, 4], [5, 2, 1, 4, 3], [5, 2, 3, 1, 4], [5, 2, 3, 4, 1], [5, 2, 4, 1, 3], [5, 2, 4, 3, 1], [5, 3, 1, 2, 4], [5, 3, 1, 4, 2], [5, 3, 2, 1, 4], [5, 3, 2, 4, 1], [5, 3, 4, 1, 2], [5, 3, 4, 2, 1], [5, 4, 1, 2, 3], [5, 4, 1, 3, 2], [5, 4, 2, 1, 3], [5, 4, 2, 3, 1], [5, 4, 3, 1, 2], [5, 4, 3, 2, 1]];
 
 function SortingAlgorithms() {
     return this;
 }
 
-// Convenience function
-function swap(arr, index1, index2) {
-    dummy = arr[index1];
-    arr[index1] = arr[index2];
-    arr[index2] = dummy;
-}
-
-// http://en.wikipedia.org/wiki/Sorting_algorithm
-// https://github.com/nzakas/computer-science-in-javascript/
-// http://www.nczonline.net/blog/2012/10/02/computer-science-and-javascript-merge-sort/
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-// http://davidwalsh.name/javascript-clone-array
 SortingAlgorithms.prototype = {
-    // Insertion sort: http://www.princeton.edu/~achaney/tmve/wiki100k/docs/Insertion_sort.html
-    // http://en.wikibooks.org/wiki/A-level_Computing/AQA/Problem_Solving,_Programming,_Operating_Systems,_Databases_and_Networking/Programming_Concepts/Insertion_sort
-    insertionSort: function insertionSort(lst) { 
+    solution: function sortingAlgorithmsSolution(lst) {
+        lst.sort();
+        return lst;
+    },
+    insertionSort: function insertionSort(lst) {
         var len = lst.length,
         index,
         currIndex = 0,
@@ -41,11 +31,7 @@ SortingAlgorithms.prototype = {
         }
         return lst;
     },
-    //http://en.wikipedia.org/wiki/Selection_sort
-    //http://www.sorting-algorithms.com/selection-sort
-    //http://stackoverflow.com/questions/15799034/insertion-sort-vs-selection-sort
-    //http://www.nczonline.net/blog/2009/09/08/computer-science-in-javascript-selection-sort/
-    selectionSort: function selectionSort(lst) { 
+    selectionSort: function selectionSort(lst) {
         var index = 0,
         len = lst.length,
         currIndex,
@@ -63,11 +49,8 @@ SortingAlgorithms.prototype = {
         }
         return lst;
     },
-    // bingoSort: function bingoSort(lst) { },
-    // cocktailSort: function cocktailSort(lst) { },
-    // http://en.wikipedia.org/wiki/Merge_sort
-    mergeSort: function mergeSort(lst) {
-
+    // mergeSort: function mergeSort(lst) { },
+    mergeSortInPlace: function mergeSort(lst) {
         function merge(left, right) {
             var answer = [], winner;
             while (left.length && right.length) {
@@ -95,19 +78,84 @@ SortingAlgorithms.prototype = {
 
         return split(lst);
     },
-    // heapSort: function heapSort(lst) { },
+    bubbleSort: function bubbleSort(lst) {
+        var len = lst.length,
+        innerLen = len-1,
+        outerPosition = 0,
+        innerPosition = 0;
+        for (; outerPosition < len; outerPosition++, innerPosition = 0, innerLen--)  {
+           for(; innerPosition < innerLen; innerPosition++) {
+                if (lst[innerPosition] > lst[innerPosition+1]) {
+                    swap(lst, innerPosition,innerPosition+1);
+                }
+           }
+        }
+        return lst;
+    },
+    // *** important *** 
     // quickSort: function quickSort(lst) { },
-    // bubbleSort: function bubbleSort(lst) { },
-    // shellSort: function shellSort(lst) { },
-    // combSort: function combSort(lst) { },
-    // countingSort: function countingSort(lst) { },
-    // bucketSort: function bucketSort(lst) { },
+    // heapSort: function heapSort(lst) { },
     // radixSort: function radixSort(lst) { },
+    // topologicalSort: function topologicalSort(lst) { },
+    // countingSort: function countingSort(lst) { },
+    // shellSort: function shellSort(lst) { },
+    // bucketSort: function bucketSort(lst) { },
+    // bingoSort: function bingoSort(lst) { },
+    // cocktailSort: function cocktailSort(lst) { },
+    // combSort: function combSort(lst) { },
+    // introSort: function introSort(lst) { },
+    // timSort: function timSort(lst) { },
+    // binaryTreeSort: function binaryTreeSort(lst) { },
+    // cycleSort: function cycleSort(lst) { },
+    // librarySort: function LibrarySort(lst) {},
+    // patienceSorting: function PatienceSorting(lst) {},
+    // smoothSort: function SmoothSort(lst) {},
+    // strandSort: function StrandSort(lst) {},
+    // tournamentSort: function TournamentSort(lst) {},
+    // cocktailSort: function CocktailSort(lst) {},
+    // combSort: function CombSort(lst) {},
+    // gnomeSort: function GnomeSort(lst) {},
+    // bogoSort: function BogoSort(lst) {},
 };
 
 
 var sorter = new SortingAlgorithms();
 
-console.log("Running Sorting Algorithms");
+tester.test('Sorting', sorter, sortingTestingArray);
 
-tester.test(sorter);
+/*
+ * Documentation:
+ *
+ * Resources for Algorithm Review:
+ * http://www.quora.com/Computer-Science/What-are-some-concepts-algorithms-data-structures-that-every-computer-science-student-should-know
+ *
+ * http://en.wikipedia.org/wiki/Sorting_algorithm
+ * https://github.com/nzakas/computer-science-in-javascript/
+ * http://www.nczonline.net/blog/2012/10/02/computer-science-and-javascript-merge-sort/
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+ * http://davidwalsh.name/javascript-clone-array
+ *
+ * Insertion Sort:
+ *
+ * http://www.princeton.edu/~achaney/tmve/wiki100k/docs/Insertion_sort.html
+ * http://en.wikibooks.org/wiki/A-level_Computing/AQA/Problem_Solving,_Programming,_Operating_Systems,_Databases_and_Networking/Programming_Concepts/Insertion_sort
+ *
+ * Selection Sort:
+ *
+ * http://en.wikipedia.org/wiki/Selection_sort
+ * http://www.sorting-algorithms.com/selection-sort
+ * http://stackoverflow.com/questions/15799034/insertion-sort-vs-selection-sort
+ * http://www.nczonline.net/blog/2009/09/08/computer-science-in-javascript-selection-sort/
+ *
+ * Merge Sort:
+ *
+ * http://en.wikipedia.org/wiki/Merge_sort
+ *
+ * Quick Sort:
+ *
+ * http://algorithm.daqwest.com/search?search=Quicksort
+ *
+ * BONUS CHALLENGE:
+ * Do everything both recursively and iteratively 
+ */
+

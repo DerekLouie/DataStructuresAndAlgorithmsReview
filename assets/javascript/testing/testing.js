@@ -3,44 +3,76 @@
 /*jshint debug: true */
 
 // for running tests with node
-var document = document || 0;
+var document = document || {
+    write: function(str) { 
+        console.log(str);
+    }
+};
 
-var sorted, failed = [], passed;
+/* This is my test runner class.
+ *
+ * There is one public method and that is test.
+ *
+ * Test takes in an algorithms object, and runs
+ * through every method on that object.
+ *
+ * That object also needs to have an "solution" 
+ * function that is neccessary for testing the 
+ * algorithms correctness, it should return a 
+ * correct solution for the test input.
+ *
+ * You also need to pass in a testingArray of
+ * test cases (in the form of arrays) that the 
+ * methods in the algorithms object will be called
+ * on and the solution function as well.
+ *
+ */
+function Tester() {}
 
-function SortingTester() {}
+Tester.prototype = {
+    _testFailure: function testFailure(answer, index, nameOfAlgo, solution) {
+        if(answer.toString() !== solution.toString()) {
+            if(document) {
+                document.write("<span class='failed'> Test " + index +": ("+ nameOfAlgo +"): " + answer + "</span><br/>");
+            }
+            return false;
+        }
+        return true;
+    },
+    test: function test(name, algos, testingArray) {
+        var answer, 
+        testPassed = true,
+        passed = true, 
+        solution,
+        failed = [],
+        that = this;
 
-SortingTester.prototype = {
-    test: function test(algos) {
+        if (!name) {
+            name = '';
+        }
+
+        document.write("<div><b>Running "+ name +" Tests<b></div> <br/>");
         for (var nameOfAlgo in algos) {
             testingArray.forEach(
                     function(element,index){
-                        console.log("Running Test: " + element); 
-                        sorted = algos[nameOfAlgo](element.slice(0));
-                        passed = true;
-                        // console.log("Test "+ index +": ("+nameOfAlgo +"): \n","Original: ", element, "\n   Answer: ", sorted);
-                        if(sorted.toString() !== answer.toString()) {
-                            console.log("TEST FAILED"); 
-                            failed.push("Test "+ index +": ("+ nameOfAlgo +"): " + sorted);
+                        // console.log("Running Test: " + element); 
+                        answer = algos[nameOfAlgo](element.slice());
+                        solution = algos.solution(element.slice());
+                        testPassed = that._testFailure(answer, index, nameOfAlgo, solution);
+                        if (!testPassed) {
                             passed = false;
                         }
+                        // console.log("Test "+ index +": ("+nameOfAlgo +"): \n","Original: ", element, "\n   Answer: ", answer);
                     });
             if (passed) {
-                console.log("TEST "+nameOfAlgo+": PASSED"); 
+                // console.log("TEST "+nameOfAlgo+": PASSED"); 
                 if(document) {
                     document.write("TEST "+nameOfAlgo+": <span class='passed'>PASSED</span><br/>");
                 }
             }
         } 
-        if (failed.length) {
-            console.log("\n\n\nFAILED TESTS: \n");
-            failed.forEach(function(element) {
-                console.log(element);
-                if(document) {
-                    document.write("<span class='failed'>" + element + "</span><br/>");
-                }
-            });
-        }
+    document.write("<br/><br/>");
     }
 };
 
-var tester = new SortingTester();
+var tester = new Tester();
