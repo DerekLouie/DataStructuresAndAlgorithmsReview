@@ -1,7 +1,3 @@
-/*jslint evil: true */
-/*jshint loopfunc: true */
-/*jshint debug: true */
-
 // for running tests with node
 var document = document || {
     write: function(str) { 
@@ -45,7 +41,9 @@ Tester.prototype = {
         passed = true, 
         solution,
         failed = [],
-        that = this;
+        that = this,
+        testInput,
+        answerInput;
 
         if (!name) {
             name = '';
@@ -55,14 +53,18 @@ Tester.prototype = {
         for (var nameOfAlgo in algos) {
             testingArray.forEach(
                     function(element,index){
-                        // console.log("Running Test: " + element); 
-                        answer = algos[nameOfAlgo](element.slice());
-                        solution = algos.solution(element.slice());
+                           testInput = answerInput = element;
+                        if (Object.prototype.toString.call(element) === '[object Array]') {
+                           testInput = element.slice();
+                           answerInput  = element.slice();
+                        }
+                        answer = algos[nameOfAlgo](testInput);
+                        solution = algos.solution(answerInput);
                         testPassed = that._testFailure(answer, index, nameOfAlgo, solution);
                         if (!testPassed) {
                             passed = false;
                         }
-                        // console.log("Test "+ index +": ("+nameOfAlgo +"): \n","Original: ", element, "\n   Answer: ", answer);
+                        console.log("Test "+ index +": ("+nameOfAlgo +"): \n","Original: ", element, "\n   Answer: ", answer);
                     });
             if (passed) {
                 // console.log("TEST "+nameOfAlgo+": PASSED"); 

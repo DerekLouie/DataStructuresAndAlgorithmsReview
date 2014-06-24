@@ -16,7 +16,10 @@
     "gulp-plumber": "~0.6.2",
     "underscore": "~1.6.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "map-stream": "~0.1.0",
+    "q": "~1.0.1"
+  },
   "scripts": {
     "test": "gulp"
   },

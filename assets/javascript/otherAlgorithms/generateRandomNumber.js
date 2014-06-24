@@ -1,0 +1,10 @@
+// http://stackoverflow.com/questions/13914066/generate-random-number-with-given-probability-matlab
+// http://en.wikipedia.org/wiki/Rejection_sampling
+// http://cs.stackexchange.com/questions/570/generating-uniformly-distributed-random-numbers-using-a-coin
+// http://www.geeksforgeeks.org/random-number-generator-in-arbitrary-probability-distribution-fashion/
+// http://www.quora.com/Algorithms/How-can-we-generate-a-random-number-with-equal-probability-in-the-range-1-n-s-t-it-doesnt-belong-to-the-invalid-set-of-numbers-S-xi-1-xi-n-and-i-in-1-k-and-k-n-using-O-k-memory-provided-we-can-call-random-function-only-once
+// https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=computer+science+create+a+random+number+generator+with+probability&start=10
+// http://www.careercup.com/question?id=12426697
+// http://www.geeksforgeeks.org/generate-integer-from-1-to-7-with-equal-probability/
+// http://stackoverflow.com/questions/5051970/an-interview-question-about-probability
+// https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=interview+question+given+probability+random+numbers&spell=1

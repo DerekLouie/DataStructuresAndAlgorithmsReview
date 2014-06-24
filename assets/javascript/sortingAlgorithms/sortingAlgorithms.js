@@ -1,56 +1,51 @@
-/*jshint debug: true */
-/*jslint evil: true */
-
 sortingTestingArray = [[1, 2, 3, 4, 5], [1, 2, 3, 5, 4], [1, 2, 4, 3, 5], [1, 2, 4, 5, 3], [1, 2, 5, 3, 4], [1, 2, 5, 4, 3], [1, 3, 2, 4, 5], [1, 3, 2, 5, 4], [1, 3, 4, 2, 5], [1, 3, 4, 5, 2], [1, 3, 5, 2, 4], [1, 3, 5, 4, 2], [1, 4, 2, 3, 5], [1, 4, 2, 5, 3], [1, 4, 3, 2, 5], [1, 4, 3, 5, 2], [1, 4, 5, 2, 3], [1, 4, 5, 3, 2], [1, 5, 2, 3, 4], [1, 5, 2, 4, 3], [1, 5, 3, 2, 4], [1, 5, 3, 4, 2], [1, 5, 4, 2, 3], [1, 5, 4, 3, 2], [2, 1, 3, 4, 5], [2, 1, 3, 5, 4], [2, 1, 4, 3, 5], [2, 1, 4, 5, 3], [2, 1, 5, 3, 4], [2, 1, 5, 4, 3], [2, 3, 1, 4, 5], [2, 3, 1, 5, 4], [2, 3, 4, 1, 5], [2, 3, 4, 5, 1], [2, 3, 5, 1, 4], [2, 3, 5, 4, 1], [2, 4, 1, 3, 5], [2, 4, 1, 5, 3], [2, 4, 3, 1, 5], [2, 4, 3, 5, 1], [2, 4, 5, 1, 3], [2, 4, 5, 3, 1], [2, 5, 1, 3, 4], [2, 5, 1, 4, 3], [2, 5, 3, 1, 4], [2, 5, 3, 4, 1], [2, 5, 4, 1, 3], [2, 5, 4, 3, 1], [3, 1, 2, 4, 5], [3, 1, 2, 5, 4], [3, 1, 4, 2, 5], [3, 1, 4, 5, 2], [3, 1, 5, 2, 4], [3, 1, 5, 4, 2], [3, 2, 1, 4, 5], [3, 2, 1, 5, 4], [3, 2, 4, 1, 5], [3, 2, 4, 5, 1], [3, 2, 5, 1, 4], [3, 2, 5, 4, 1], [3, 4, 1, 2, 5], [3, 4, 1, 5, 2], [3, 4, 2, 1, 5], [3, 4, 2, 5, 1], [3, 4, 5, 1, 2], [3, 4, 5, 2, 1], [3, 5, 1, 2, 4], [3, 5, 1, 4, 2], [3, 5, 2, 1, 4], [3, 5, 2, 4, 1], [3, 5, 4, 1, 2], [3, 5, 4, 2, 1], [4, 1, 2, 3, 5], [4, 1, 2, 5, 3], [4, 1, 3, 2, 5], [4, 1, 3, 5, 2], [4, 1, 5, 2, 3], [4, 1, 5, 3, 2], [4, 2, 1, 3, 5], [4, 2, 1, 5, 3], [4, 2, 3, 1, 5], [4, 2, 3, 5, 1], [4, 2, 5, 1, 3], [4, 2, 5, 3, 1], [4, 3, 1, 2, 5], [4, 3, 1, 5, 2], [4, 3, 2, 1, 5], [4, 3, 2, 5, 1], [4, 3, 5, 1, 2], [4, 3, 5, 2, 1], [4, 5, 1, 2, 3], [4, 5, 1, 3, 2], [4, 5, 2, 1, 3], [4, 5, 2, 3, 1], [4, 5, 3, 1, 2], [4, 5, 3, 2, 1], [5, 1, 2, 3, 4], [5, 1, 2, 4, 3], [5, 1, 3, 2, 4], [5, 1, 3, 4, 2], [5, 1, 4, 2, 3], [5, 1, 4, 3, 2], [5, 2, 1, 3, 4], [5, 2, 1, 4, 3], [5, 2, 3, 1, 4], [5, 2, 3, 4, 1], [5, 2, 4, 1, 3], [5, 2, 4, 3, 1], [5, 3, 1, 2, 4], [5, 3, 1, 4, 2], [5, 3, 2, 1, 4], [5, 3, 2, 4, 1], [5, 3, 4, 1, 2], [5, 3, 4, 2, 1], [5, 4, 1, 2, 3], [5, 4, 1, 3, 2], [5, 4, 2, 1, 3], [5, 4, 2, 3, 1], [5, 4, 3, 1, 2], [5, 4, 3, 2, 1]];
 
-function SortingAlgorithms() {
-    return this;
-}
+function SortingAlgorithms() { }
 
 SortingAlgorithms.prototype = {
-    solution: function sortingAlgorithmsSolution(lst) {
-        lst.sort();
-        return lst;
+    solution: function sortingAlgorithmsSolution(list) {
+        list.sort();
+        return list;
     },
-    insertionSort: function insertionSort(lst) {
-        var len = lst.length,
+    insertionSort: function insertionSort(list) {
+        var len = list.length,
         index,
         currIndex = 0,
         dummy;
         for (index = 0; index < len; index++) {
-            dummy = lst[index];
+            dummy = list[index];
             while (currIndex < index) {
-                if (lst[currIndex] > dummy){
-                    lst.splice(index,1);
-                    lst.splice(currIndex,0,dummy);
+                if (list[currIndex] > dummy){
+                    list.splice(index,1);
+                    list.splice(currIndex,0,dummy);
                     break;
                 }
                 currIndex++;
             }
             currIndex = 0;
         }
-        return lst;
+        return list;
     },
-    selectionSort: function selectionSort(lst) {
+    selectionSort: function selectionSort(list) {
         var index = 0,
-        len = lst.length,
+        len = list.length,
         currIndex,
         min,
         minIndex = 0;
         while(index < len) {
             minIndex = index;
             for(currIndex = index; currIndex < len; currIndex++) {
-                if(lst[currIndex] < lst[minIndex]) {
+                if(list[currIndex] < list[minIndex]) {
                     minIndex = currIndex;
                 }
             }
-            swap(lst, index, minIndex);
+            swap(list, index, minIndex);
             index++;
         }
-        return lst;
+        return list;
     },
-    // mergeSort: function mergeSort(lst) { },
-    mergeSortInPlace: function mergeSort(lst) {
+    // mergeSort: function mergeSort(list) { },
+    mergeSortInPlace: function mergeSort(list) {
         function merge(left, right) {
             var answer = [], winner;
             while (left.length && right.length) {
@@ -66,56 +61,56 @@ SortingAlgorithms.prototype = {
             return answer.concat(left).concat(right);
         }
 
-        function split(lst) {
-            if (lst.length === 1) {
-                return lst;
+        function split(list) {
+            if (list.length === 1) {
+                return list;
             }
-            var mid = Math.floor(lst.length / 2),
-                left = mergeSort(lst.slice(0,mid)),
-                right = mergeSort(lst.slice(mid));
+            var mid = Math.floor(list.length / 2),
+                left = mergeSort(list.slice(0,mid)),
+                right = mergeSort(list.slice(mid));
             return merge(left, right);
         }
 
-        return split(lst);
+        return split(list);
     },
-    bubbleSort: function bubbleSort(lst) {
-        var len = lst.length,
+    bubbleSort: function bubbleSort(list) {
+        var len = list.length,
         innerLen = len-1,
         outerPosition = 0,
         innerPosition = 0;
         for (; outerPosition < len; outerPosition++, innerPosition = 0, innerLen--)  {
            for(; innerPosition < innerLen; innerPosition++) {
-                if (lst[innerPosition] > lst[innerPosition+1]) {
-                    swap(lst, innerPosition,innerPosition+1);
+                if (list[innerPosition] > list[innerPosition+1]) {
+                    swap(list, innerPosition,innerPosition+1);
                 }
            }
         }
-        return lst;
+        return list;
     },
     // *** important *** 
-    // quickSort: function quickSort(lst) { },
-    // heapSort: function heapSort(lst) { },
-    // radixSort: function radixSort(lst) { },
-    // topologicalSort: function topologicalSort(lst) { },
-    // countingSort: function countingSort(lst) { },
-    // shellSort: function shellSort(lst) { },
-    // bucketSort: function bucketSort(lst) { },
-    // bingoSort: function bingoSort(lst) { },
-    // cocktailSort: function cocktailSort(lst) { },
-    // combSort: function combSort(lst) { },
-    // introSort: function introSort(lst) { },
-    // timSort: function timSort(lst) { },
-    // binaryTreeSort: function binaryTreeSort(lst) { },
-    // cycleSort: function cycleSort(lst) { },
-    // librarySort: function LibrarySort(lst) {},
-    // patienceSorting: function PatienceSorting(lst) {},
-    // smoothSort: function SmoothSort(lst) {},
-    // strandSort: function StrandSort(lst) {},
-    // tournamentSort: function TournamentSort(lst) {},
-    // cocktailSort: function CocktailSort(lst) {},
-    // combSort: function CombSort(lst) {},
-    // gnomeSort: function GnomeSort(lst) {},
-    // bogoSort: function BogoSort(lst) {},
+    // quickSort: function quickSort(list) { },
+    // heapSort: function heapSort(list) { },
+    // radixSort: function radixSort(list) { },
+    // topologicalSort: function topologicalSort(list) { },
+    // countingSort: function countingSort(list) { },
+    // shellSort: function shellSort(list) { },
+    // bucketSort: function bucketSort(list) { },
+    // bingoSort: function bingoSort(list) { },
+    // cocktailSort: function cocktailSort(list) { },
+    // combSort: function combSort(list) { },
+    // introSort: function introSort(list) { },
+    // timSort: function timSort(list) { },
+    // binaryTreeSort: function binaryTreeSort(list) { },
+    // cycleSort: function cycleSort(list) { },
+    // librarySort: function LibrarySort(list) {},
+    // patienceSorting: function PatienceSorting(list) {},
+    // smoothSort: function SmoothSort(list) {},
+    // strandSort: function StrandSort(list) {},
+    // tournamentSort: function TournamentSort(list) {},
+    // cocktailSort: function CocktailSort(list) {},
+    // combSort: function CombSort(list) {},
+    // gnomeSort: function GnomeSort(list) {},
+    // bogoSort: function BogoSort(list) {},
 };
 
 
@@ -158,4 +153,3 @@ tester.test('Sorting', sorter, sortingTestingArray);
  * BONUS CHALLENGE:
  * Do everything both recursively and iteratively 
  */
-

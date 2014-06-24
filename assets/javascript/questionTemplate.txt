@@ -1,0 +1,16 @@
+noaTestingArray = [];
+
+function NOA() {}
+
+NOA.prototype = {
+    solution: function NOASolution(str) {
+    
+    },
+    noa: function noa(str) {
+
+    }
+};
+
+var noa = new noa();
+
+// tester.test('Name of Algorithm', noa, noaTestingArray);

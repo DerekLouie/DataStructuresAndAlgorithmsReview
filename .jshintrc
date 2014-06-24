@@ -1,0 +1,10 @@
+{
+    "globals": {
+        "$": false,
+        "jQuery": false,
+        "angular": false
+    },
+    "evil": true,
+    "loopfunc": true,
+    "debug": true
+}
